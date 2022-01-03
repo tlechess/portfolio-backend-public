@@ -18,27 +18,26 @@ public class Project {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
+	
 	@Column(name = "project_name")
 	private String projectName;
+	
 	@Column(name = "project_category")
 	private String projectCategory;
+	
 	@Column(name = "cliant")
 	private String cliant;
+	
 	@Column(name = "project_date")
 	private String projectDate;
+	
+	@Column(name = "project_details")
+	private String details;
 	
 	@OneToOne
 	@JoinColumn(name = "project_url_id")
 	private ProjectUrls projectUrls;
 	
-	public ProjectUrls getProjectUrls() {
-		return projectUrls;
-	}
-
-	public void setProjectUrls(ProjectUrls projectUrls) {
-		this.projectUrls = projectUrls;
-	}
-
 	//Constructors
 	public Project() {}
 
@@ -57,6 +56,15 @@ public class Project {
 	public void setProjectDate(String projectDate) {
 		this.projectDate = projectDate;
 	}
+	
+	public ProjectUrls getProjectUrls() {
+		return projectUrls;
+	}
+
+	public void setProjectUrls(ProjectUrls projectUrls) {
+		this.projectUrls = projectUrls;
+	}
+
 	
 	public String getProjectName() {
 		return projectName;
@@ -85,5 +93,15 @@ public class Project {
 	public int getId() {
 		return id;
 	}
+
+	public String getDetails() {
+		return details;
+	}
+
+	public void setDetails(String details) {
+		this.details = details;
+	}
+	
+	
 	
 }
