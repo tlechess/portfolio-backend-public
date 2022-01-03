@@ -24,6 +24,8 @@ public class Project {
 	private String projectCategory;
 	@Column(name = "cliant")
 	private String cliant;
+	@Column(name = "project_date")
+	private String projectDate;
 	
 	@OneToOne
 	@JoinColumn(name = "project_url_id")
@@ -46,7 +48,16 @@ public class Project {
 		this.cliant = cliant;
 	}
 
+	
 	//Getters And Setters
+	public String getProjectDate() {
+		return projectDate;
+	}
+
+	public void setProjectDate(String projectDate) {
+		this.projectDate = projectDate;
+	}
+	
 	public String getProjectName() {
 		return projectName;
 	}
