@@ -8,35 +8,36 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "job_discription")
-public class JobDiscription {
+@Table(name="education_details")
+public class EducationDetails {
+
 	//Data Fields
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	
 	private int id;
-	@Column(name = "discription")
-	private String discription;
-	
-	//Constructors
-	public JobDiscription() {}
+		
+	@Column(name = "details")
+	private String details;
 
-	public JobDiscription(String discription) {
-		this.discription = discription;
-	}
+	//Constructor
+	public EducationDetails() {}
 
+	//Methods
 	//Getters and Setters
-	public String getDiscription() {
-		return discription;
+	public EducationDetails(String details) {
+		this.details = details;
 	}
 
-	public void setDiscription(String discription) {
-		this.discription = discription;
+	public String getDetails() {
+		return details;
+	}
+
+	public void setDetails(String details) {
+		this.details = details;
 	}
 
 	public int getId() {
 		return id;
 	}
-		
 }
