@@ -34,6 +34,9 @@ public class Project {
 	@Column(name = "project_details")
 	private String details;
 	
+	@Column(name = "project_short_details")
+	private String shortDetails;
+	
 	@OneToOne
 	@JoinColumn(name = "project_url_id")
 	private ProjectUrls projectUrls;
@@ -101,7 +104,14 @@ public class Project {
 	public void setDetails(String details) {
 		this.details = details;
 	}
-	
+
+	public String getShortDetails() {
+		return shortDetails;
+	}
+
+	public void setShortDetails(String shortDetails) {
+		this.shortDetails = shortDetails;
+	}
 	
 	
 }
